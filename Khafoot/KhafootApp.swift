@@ -2,7 +2,7 @@
 //  KhafootApp.swift
 //  Khafoot
 //
-//  Created by Shahad Alhothali on 01/05/1446 AH.
+//  Created by Shahad Alhothali on 28/04/1446 AH.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct KhafootApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }
