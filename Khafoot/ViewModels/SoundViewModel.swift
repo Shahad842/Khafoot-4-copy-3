@@ -20,6 +20,13 @@ class SoundViewModel: ObservableObject {
             player?.volume = volume
         }
     }
+    
+    // New property to store liked sounds
+    @Published var likedSounds: [SoundModel] = []
+    
+    init() {
+           loadLikedSounds() // Load liked sounds when the view model initializes
+       }
 
     var player: AVAudioPlayer?
     private var timer: AnyCancellable?
@@ -131,4 +138,26 @@ class SoundViewModel: ObservableObject {
         guard let sound = currentSound else { return "No sound to share." }
         return "Check out this sound: \(sound.title) - Listen here: [Link to Sound]" // Replace with actual link if available
     }
+    
+    // Function to like a sound and save it
+  
+    func toggleLike(sound: SoundModel) {
+           if let index = likedSounds.firstIndex(where: { $0.id == sound.id }) {
+               likedSounds.remove(at: index) // Unlike if already liked
+           } else {
+               likedSounds.append(sound) // Add to liked sounds
+           }
+           saveLikedSounds() // Save to UserDefaults after updating
+       }
+
+       private func saveLikedSounds() {
+           let data = try? JSONEncoder().encode(likedSounds)
+           UserDefaults.standard.set(data, forKey: "likedSounds")
+       }
+
+       private func loadLikedSounds() {
+           guard let data = UserDefaults.standard.data(forKey: "likedSounds"),
+                 let sounds = try? JSONDecoder().decode([SoundModel].self, from: data) else { return }
+           likedSounds = sounds
+       }
 }

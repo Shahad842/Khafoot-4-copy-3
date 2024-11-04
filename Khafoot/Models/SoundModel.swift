@@ -10,13 +10,13 @@ import AVFoundation
 import Combine
 
 // Sound Model SoundModel
-struct SoundModel: Identifiable {
+struct SoundModel: Identifiable, Codable {
     var id = UUID()
     var title: String
     var duration: TimeInterval
     var date: String
     var soundImage: String
     var fileName: String
-    var category: String // New category property
+    var category: String
 }
 

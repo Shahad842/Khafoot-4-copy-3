@@ -3,7 +3,7 @@
 //  khafootTest1
 //
 //  Created by Shahad Alhothali on 29/04/1446 AH.
-//
+
 import SwiftUI
 import AVFoundation
 import Combine
@@ -12,7 +12,7 @@ struct SoundView: View {
     @ObservedObject var viewModel: SoundViewModel
     @Binding var expandSheet: Bool
     @State private var showShareSheet = false
-    
+
     var body: some View {
         ZStack {
             if let sound = viewModel.currentSound {
@@ -35,6 +35,7 @@ struct SoundView: View {
                         .frame(width: 35, height: 5)
                         .cornerRadius(2)
                         .padding(.top, 8)
+                    
                     // Display the sound image
                     Image(sound.soundImage)
                         .resizable()
@@ -62,7 +63,7 @@ struct SoundView: View {
                             
                         }
                         .padding(.leading)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         
                         // Menu Button for Share and Report Problem
                         Menu {
@@ -73,13 +74,12 @@ struct SoundView: View {
                                 reportProblem()
                             }
                         } label: {
-                              Image(systemName: "ellipsis.circle.fill")
-                                  .resizable()
-                                  .frame(width: 26, height: 26)
-                                  .foregroundColor(Color.white.opacity(0.9))
-                                  .blendMode(.overlay)
-                                  .padding()
-
+                            Image(systemName: "ellipsis.circle.fill")
+                                .resizable()
+                                .frame(width: 26, height: 26)
+                                .foregroundColor(Color.white.opacity(0.9))
+                                .blendMode(.overlay)
+                                .padding()
                         }
                         .sheet(isPresented: $showShareSheet) {
                             ShareSheet(activityItems: [viewModel.shareCurrentSound()])
@@ -96,14 +96,33 @@ struct SoundView: View {
                         playAction: { viewModel.togglePlayPause() },
                         forwardAction: { viewModel.seekForward15Seconds() },
                         backwardAction: { viewModel.seekBackward15Seconds() },
-                                                viewModel: viewModel
+                        viewModel: viewModel
                     )
                     .padding()
                     
-                    //airplay
-                    AirPlayButton()
-                                       .frame(width: 30, height: 30) // Set the size as needed
-                                       .padding()
+                    // AirPlay and Like buttons at the bottom
+                    HStack {
+                        Spacer()
+                        
+                        // AirPlay Button
+                        AirPlayButton()
+                            .frame(width: 30, height: 30)
+                            .padding()
+                        
+                        Spacer()
+                        
+                        // Like Button
+                        Button(action: {
+                            viewModel.toggleLike(sound: sound)
+                        }) {
+                            Image(systemName: viewModel.likedSounds.contains(where: { $0.id == sound.id }) ? "heart.fill" : "heart")
+                                .font(.title2)
+                                .foregroundColor(viewModel.likedSounds.contains(where: { $0.id == sound.id }) ? .red : .white)
+                        }
+                        
+                        Spacer()
+                    }
+                    .padding(.bottom)
                     
                 }
                 .padding()
@@ -119,7 +138,7 @@ struct SoundView: View {
             DragGesture()
                 .onEnded { value in
                     if value.translation.height > 100 {
-                        expandSheet = false 
+                        expandSheet = false
                     }
                 }
         )
@@ -158,4 +177,3 @@ struct SoundView: View {
         }
     }
 }
-
