@@ -47,17 +47,17 @@ struct SoundView: View {
                         VStack(alignment: .leading) {
                             Text(formatDate(sound.date))
                                 .font(.system(size: 12))
-                                .foregroundColor(Color("TextColor"))
+                                .foregroundColor(.white)
                                 .padding(.bottom, 1)
 
                             Text(sound.category)
                                 .font(.system(size: 16))
-                                .foregroundColor(Color("TextColor"))
+                                .foregroundColor(.white)
                                 .padding(.bottom, 1)
                             
                             Text(sound.title)
                                 .font(.system(size: 16))
-                                .foregroundColor(Color("TextColor"))
+                                .foregroundColor(.white)
                                 .padding(.bottom, 1)
                             
                         }
@@ -109,7 +109,7 @@ struct SoundView: View {
                 .padding()
             } else {
                 Text("No sound selected")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
             }
         }
         .onDisappear {

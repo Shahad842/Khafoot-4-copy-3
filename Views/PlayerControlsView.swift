@@ -36,8 +36,6 @@ struct PlayerControlsView: View {
                     // Progress track
                     Rectangle()
                         .fill(Color.white)
-                        .foregroundColor(Color("AccentColor"))
-
                         .frame(width: CGFloat(currentTime / totalTime) * sliderWidth, height: 6.6)
                         .cornerRadius(8)
                         .animation(.easeInOut(duration: 0.1), value: currentTime) // Reduced duration for smoother animation
@@ -62,12 +60,12 @@ struct PlayerControlsView: View {
             HStack {
                 Text(timeString(time: currentTime))
                     .font(.system(size: 10.8))
-                    .foregroundColor(Color("TextColor"))
+                    .foregroundColor(.white)
                     .padding(.bottom, 1)
                 Spacer()
                 Text(timeString(time: totalTime))
                     .font(.system(size: 10.8))
-                    .foregroundColor(Color("TextColor"))
+                    .foregroundColor(.white)
                     .padding(.bottom, 1)
             }
             Spacer()

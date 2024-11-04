@@ -20,8 +20,3 @@ struct SoundModel: Identifiable {
     var category: String // New category property
 }
 
-struct Track {
-    let title: String
-    let imageName: String
-    let fileName: String
-}

@@ -23,9 +23,8 @@ struct MainView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .frame(width: 176, height: 100)
-                        .foregroundColor(Color("AccentColor"))
+                        .foregroundColor(Color("TextColor"))
                         .padding()
-                    
                     Spacer()
                     NavigationLink(destination: SettingsView()) { // Updated to NavigationLink
                                               Image(systemName: "gearshape")
@@ -42,7 +41,8 @@ struct MainView: View {
                                     .font(.system(size: 22))
                                     .fontWeight(.bold)
                                     .padding(.leading)
-                                        
+                                    .foregroundColor(Color("TextColor"))
+
                                 Spacer()
                                 
                                 NavigationLink(destination: RainView()) {
