@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Access to sound" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -12,6 +13,7 @@
       }
     },
     "Activate notifications" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -31,10 +33,14 @@
         }
       }
     },
-    "Hello, World!" : {
+    "Enable Notifications" : {
+
+    },
+    "Enable Sound" : {
 
     },
     "If there is a problem, you can contact us via email to solve it" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -43,6 +49,9 @@
           }
         }
       }
+    },
+    "If there is a problem, you can contact us via email to solve it." : {
+
     },
     "Khafoot" : {
       "localizations" : {
@@ -129,6 +138,9 @@
         }
       }
     },
+    "Relaxing %@ Sounds" : {
+
+    },
     "Report a Problem" : {
       "localizations" : {
         "ar" : {
@@ -140,6 +152,7 @@
       }
     },
     "Report problem" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -149,7 +162,14 @@
         }
       }
     },
+    "Report Problem" : {
+
+    },
+    "RESUME" : {
+
+    },
     "Setting" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -158,6 +178,9 @@
           }
         }
       }
+    },
+    "Settings" : {
+
     },
     "Share" : {
       "localizations" : {
@@ -190,6 +213,7 @@
       }
     },
     "Upon activation, you will receive notifications and everything new" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -198,6 +222,9 @@
           }
         }
       }
+    },
+    "Upon activation, you will receive notifications and everything new." : {
+
     },
     "Water" : {
       "extractionState" : "manual",
@@ -221,6 +248,7 @@
       }
     },
     "When you allow, the sounds around you will be accessible" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -229,6 +257,75 @@
           }
         }
       }
+    },
+    "When you allow, the sounds around you will be accessible." : {
+
+    },
+    "إذا كانت هناك مشكلة، يمكنك التواصل معنا لحلها." : {
+
+    },
+    "إيقاف الصوت" : {
+
+    },
+    "اضغط لتبديل حالة الصوت بين التشغيل والإيقاف" : {
+
+    },
+    "اضغط لتقديم الصوت للأمام بمقدار 15 ثانية" : {
+
+    },
+    "اضغط للإبلاغ عن مشكلة عبر البريد الإلكتروني." : {
+
+    },
+    "الإبلاغ عن مشكلة" : {
+
+    },
+    "الوقت الحالي: %@" : {
+
+    },
+    "تاريخ الصوت: %@" : {
+
+    },
+    "تشغيل الصوت" : {
+
+    },
+    "تفعيل الإشعارات" : {
+
+    },
+    "تفعيل الصوت" : {
+
+    },
+    "تقديم الصوت 15 ثانية للأمام" : {
+
+    },
+    "سوف تتلقى إشعارات عند تفعيل الخيار" : {
+
+    },
+    "صورة الصوت %@" : {
+
+    },
+    "عند التفعيل، ستتلقى الإشعارات وكل شيء جديد." : {
+
+    },
+    "عند التفعيل، سيتم تفعيل الأصوات حولك لتكون قابلة للوصول." : {
+
+    },
+    "عند التفعيل، سيتم تفعيل الأصوات حولك." : {
+
+    },
+    "عنوان الصوت: %@" : {
+
+    },
+    "هذا هو الصوت الذي يتم تشغيله" : {
+
+    },
+    "وصف الإبلاغ عن المشكلة" : {
+
+    },
+    "وصف الإشعارات" : {
+
+    },
+    "وصف الصوت" : {
+
     }
   },
   "version" : "1.0"
